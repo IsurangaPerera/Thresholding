@@ -20,4 +20,12 @@ cv::Mat adaptiveMeanThreshold(cv::Mat img, double maxValue)
         return output;
 }
 
+cv::Mat adaptiveGaussianThreshold(cv::Mat img, double maxValue)
+{
+
+        cv::Mat output;
+        adaptiveThreshold(img, output, maxValue, cv::ADAPTIVE_THRESH_GAUSSIAN_C, cv::THRESH_BINARY,11,2);
+
+        return output;
+}
 
