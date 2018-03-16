@@ -10,3 +10,14 @@ cv::Mat globalThreshold(cv::Mat img, double thresh, double maxValue)
 
         return output;
 }
+
+cv::Mat adaptiveMeanThreshold(cv::Mat img, double maxValue)
+{
+
+        cv::Mat output;
+        adaptiveThreshold(img, output, maxValue, cv::ADAPTIVE_THRESH_MEAN_C, cv::THRESH_BINARY,11,2);
+
+        return output;
+}
+
+
