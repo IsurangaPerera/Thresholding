@@ -29,3 +29,11 @@ cv::Mat adaptiveGaussianThreshold(cv::Mat img, double maxValue)
         return output;
 }
 
+cv::Mat otsuThreshold(cv::Mat img, double thresh, double maxValue)
+{
+
+        cv::Mat output;
+        threshold(img, output, thresh, maxValue, cv::THRESH_BINARY + cv::THRESH_OTSU);
+
+        return output;
+}
